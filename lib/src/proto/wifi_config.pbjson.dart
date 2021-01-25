@@ -24,10 +24,40 @@ const CmdGetStatus$json = const {
 const RespGetStatus$json = const {
   '1': 'RespGetStatus',
   '2': const [
-    const {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.espressif.Status', '10': 'status'},
-    const {'1': 'sta_state', '3': 2, '4': 1, '5': 14, '6': '.espressif.WifiStationState', '10': 'staState'},
-    const {'1': 'fail_reason', '3': 10, '4': 1, '5': 14, '6': '.espressif.WifiConnectFailedReason', '9': 0, '10': 'failReason'},
-    const {'1': 'connected', '3': 11, '4': 1, '5': 11, '6': '.espressif.WifiConnectedState', '9': 0, '10': 'connected'},
+    const {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.espressif.Status',
+      '10': 'status'
+    },
+    const {
+      '1': 'sta_state',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.espressif.WifiStationState',
+      '10': 'staState'
+    },
+    const {
+      '1': 'fail_reason',
+      '3': 10,
+      '4': 1,
+      '5': 14,
+      '6': '.espressif.WifiConnectFailedReason',
+      '9': 0,
+      '10': 'failReason'
+    },
+    const {
+      '1': 'connected',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.WifiConnectedState',
+      '9': 0,
+      '10': 'connected'
+    },
   ],
   '8': const [
     const {'1': 'state'},
@@ -47,7 +77,14 @@ const CmdSetConfig$json = const {
 const RespSetConfig$json = const {
   '1': 'RespSetConfig',
   '2': const [
-    const {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.espressif.Status', '10': 'status'},
+    const {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.espressif.Status',
+      '10': 'status'
+    },
   ],
 };
 
@@ -58,23 +95,84 @@ const CmdApplyConfig$json = const {
 const RespApplyConfig$json = const {
   '1': 'RespApplyConfig',
   '2': const [
-    const {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.espressif.Status', '10': 'status'},
+    const {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.espressif.Status',
+      '10': 'status'
+    },
   ],
 };
 
 const WiFiConfigPayload$json = const {
   '1': 'WiFiConfigPayload',
   '2': const [
-    const {'1': 'msg', '3': 1, '4': 1, '5': 14, '6': '.espressif.WiFiConfigMsgType', '10': 'msg'},
-    const {'1': 'cmd_get_status', '3': 10, '4': 1, '5': 11, '6': '.espressif.CmdGetStatus', '9': 0, '10': 'cmdGetStatus'},
-    const {'1': 'resp_get_status', '3': 11, '4': 1, '5': 11, '6': '.espressif.RespGetStatus', '9': 0, '10': 'respGetStatus'},
-    const {'1': 'cmd_set_config', '3': 12, '4': 1, '5': 11, '6': '.espressif.CmdSetConfig', '9': 0, '10': 'cmdSetConfig'},
-    const {'1': 'resp_set_config', '3': 13, '4': 1, '5': 11, '6': '.espressif.RespSetConfig', '9': 0, '10': 'respSetConfig'},
-    const {'1': 'cmd_apply_config', '3': 14, '4': 1, '5': 11, '6': '.espressif.CmdApplyConfig', '9': 0, '10': 'cmdApplyConfig'},
-    const {'1': 'resp_apply_config', '3': 15, '4': 1, '5': 11, '6': '.espressif.RespApplyConfig', '9': 0, '10': 'respApplyConfig'},
+    const {
+      '1': 'msg',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.espressif.WiFiConfigMsgType',
+      '10': 'msg'
+    },
+    const {
+      '1': 'cmd_get_status',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.CmdGetStatus',
+      '9': 0,
+      '10': 'cmdGetStatus'
+    },
+    const {
+      '1': 'resp_get_status',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.RespGetStatus',
+      '9': 0,
+      '10': 'respGetStatus'
+    },
+    const {
+      '1': 'cmd_set_config',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.CmdSetConfig',
+      '9': 0,
+      '10': 'cmdSetConfig'
+    },
+    const {
+      '1': 'resp_set_config',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.RespSetConfig',
+      '9': 0,
+      '10': 'respSetConfig'
+    },
+    const {
+      '1': 'cmd_apply_config',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.CmdApplyConfig',
+      '9': 0,
+      '10': 'cmdApplyConfig'
+    },
+    const {
+      '1': 'resp_apply_config',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.RespApplyConfig',
+      '9': 0,
+      '10': 'respApplyConfig'
+    },
   ],
   '8': const [
     const {'1': 'payload'},
   ],
 };
-

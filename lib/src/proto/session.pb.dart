@@ -16,47 +16,63 @@ import 'session.pbenum.dart';
 
 export 'session.pbenum.dart';
 
-enum SessionData_Proto {
-  sec0, 
-  sec1, 
-  notSet
-}
+enum SessionData_Proto { sec0, sec1, notSet }
 
 class SessionData extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, SessionData_Proto> _SessionData_ProtoByTag = {
-    10 : SessionData_Proto.sec0,
-    11 : SessionData_Proto.sec1,
-    0 : SessionData_Proto.notSet
+  static const $core.Map<$core.int, SessionData_Proto> _SessionData_ProtoByTag =
+      {
+    10: SessionData_Proto.sec0,
+    11: SessionData_Proto.sec1,
+    0: SessionData_Proto.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SessionData', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'espressif'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SessionData',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'espressif'),
+      createEmptyInstance: create)
     ..oo(0, [10, 11])
-    ..e<SecSchemeVersion>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'secVer', $pb.PbFieldType.OE, defaultOrMaker: SecSchemeVersion.SecScheme0, valueOf: SecSchemeVersion.valueOf, enumValues: SecSchemeVersion.values)
-    ..aOM<$0.Sec0Payload>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sec0', subBuilder: $0.Sec0Payload.create)
-    ..aOM<$1.Sec1Payload>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sec1', subBuilder: $1.Sec1Payload.create)
-    ..hasRequiredFields = false
-  ;
+    ..e<SecSchemeVersion>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'secVer', $pb.PbFieldType.OE,
+        defaultOrMaker: SecSchemeVersion.SecScheme0,
+        valueOf: SecSchemeVersion.valueOf,
+        enumValues: SecSchemeVersion.values)
+    ..aOM<$0.Sec0Payload>(
+        10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sec0',
+        subBuilder: $0.Sec0Payload.create)
+    ..aOM<$1.Sec1Payload>(
+        11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sec1',
+        subBuilder: $1.Sec1Payload.create)
+    ..hasRequiredFields = false;
 
   SessionData._() : super();
   factory SessionData() => create();
-  factory SessionData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory SessionData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
+  factory SessionData.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SessionData.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   SessionData clone() => SessionData()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  SessionData copyWith(void Function(SessionData) updates) => super.copyWith((message) => updates(message as SessionData)); // ignore: deprecated_member_use
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SessionData copyWith(void Function(SessionData) updates) =>
+      super.copyWith((message) =>
+          updates(message as SessionData)); // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SessionData create() => SessionData._();
   SessionData createEmptyInstance() => create();
   static $pb.PbList<SessionData> createRepeated() => $pb.PbList<SessionData>();
   @$core.pragma('dart2js:noInline')
-  static SessionData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SessionData>(create);
+  static SessionData getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SessionData>(create);
   static SessionData _defaultInstance;
 
   SessionData_Proto whichProto() => _SessionData_ProtoByTag[$_whichOneof(0)];
@@ -65,7 +81,10 @@ class SessionData extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   SecSchemeVersion get secVer => $_getN(0);
   @$pb.TagNumber(2)
-  set secVer(SecSchemeVersion v) { setField(2, v); }
+  set secVer(SecSchemeVersion v) {
+    setField(2, v);
+  }
+
   @$pb.TagNumber(2)
   $core.bool hasSecVer() => $_has(0);
   @$pb.TagNumber(2)
@@ -74,7 +93,10 @@ class SessionData extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $0.Sec0Payload get sec0 => $_getN(1);
   @$pb.TagNumber(10)
-  set sec0($0.Sec0Payload v) { setField(10, v); }
+  set sec0($0.Sec0Payload v) {
+    setField(10, v);
+  }
+
   @$pb.TagNumber(10)
   $core.bool hasSec0() => $_has(1);
   @$pb.TagNumber(10)
@@ -85,7 +107,10 @@ class SessionData extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $1.Sec1Payload get sec1 => $_getN(2);
   @$pb.TagNumber(11)
-  set sec1($1.Sec1Payload v) { setField(11, v); }
+  set sec1($1.Sec1Payload v) {
+    setField(11, v);
+  }
+
   @$pb.TagNumber(11)
   $core.bool hasSec1() => $_has(2);
   @$pb.TagNumber(11)
@@ -93,4 +118,3 @@ class SessionData extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $1.Sec1Payload ensureSec1() => $_ensure(2);
 }
-

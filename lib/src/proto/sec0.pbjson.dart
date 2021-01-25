@@ -20,19 +20,48 @@ const S0SessionCmd$json = const {
 const S0SessionResp$json = const {
   '1': 'S0SessionResp',
   '2': const [
-    const {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.espressif.Status', '10': 'status'},
+    const {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.espressif.Status',
+      '10': 'status'
+    },
   ],
 };
 
 const Sec0Payload$json = const {
   '1': 'Sec0Payload',
   '2': const [
-    const {'1': 'msg', '3': 1, '4': 1, '5': 14, '6': '.espressif.Sec0MsgType', '10': 'msg'},
-    const {'1': 'sc', '3': 20, '4': 1, '5': 11, '6': '.espressif.S0SessionCmd', '9': 0, '10': 'sc'},
-    const {'1': 'sr', '3': 21, '4': 1, '5': 11, '6': '.espressif.S0SessionResp', '9': 0, '10': 'sr'},
+    const {
+      '1': 'msg',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.espressif.Sec0MsgType',
+      '10': 'msg'
+    },
+    const {
+      '1': 'sc',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.S0SessionCmd',
+      '9': 0,
+      '10': 'sc'
+    },
+    const {
+      '1': 'sr',
+      '3': 21,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.S0SessionResp',
+      '9': 0,
+      '10': 'sr'
+    },
   ],
   '8': const [
     const {'1': 'payload'},
   ],
 };
-

@@ -33,7 +33,14 @@ const CmdSetUserMapping$json = const {
 const RespSetUserMapping$json = const {
   '1': 'RespSetUserMapping',
   '2': const [
-    const {'1': 'Status', '3': 1, '4': 1, '5': 14, '6': '.rainmaker.RMakerConfigStatus', '10': 'Status'},
+    const {
+      '1': 'Status',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.rainmaker.RMakerConfigStatus',
+      '10': 'Status'
+    },
     const {'1': 'NodeId', '3': 2, '4': 1, '5': 9, '10': 'NodeId'},
   ],
 };
@@ -41,12 +48,34 @@ const RespSetUserMapping$json = const {
 const RMakerConfigPayload$json = const {
   '1': 'RMakerConfigPayload',
   '2': const [
-    const {'1': 'msg', '3': 1, '4': 1, '5': 14, '6': '.rainmaker.RMakerConfigMsgType', '10': 'msg'},
-    const {'1': 'cmd_set_user_mapping', '3': 10, '4': 1, '5': 11, '6': '.rainmaker.CmdSetUserMapping', '9': 0, '10': 'cmdSetUserMapping'},
-    const {'1': 'resp_set_user_mapping', '3': 11, '4': 1, '5': 11, '6': '.rainmaker.RespSetUserMapping', '9': 0, '10': 'respSetUserMapping'},
+    const {
+      '1': 'msg',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.rainmaker.RMakerConfigMsgType',
+      '10': 'msg'
+    },
+    const {
+      '1': 'cmd_set_user_mapping',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.rainmaker.CmdSetUserMapping',
+      '9': 0,
+      '10': 'cmdSetUserMapping'
+    },
+    const {
+      '1': 'resp_set_user_mapping',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.rainmaker.RespSetUserMapping',
+      '9': 0,
+      '10': 'respSetUserMapping'
+    },
   ],
   '8': const [
     const {'1': 'payload'},
   ],
 };
-

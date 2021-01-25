@@ -18,7 +18,8 @@ class EspDevice {
   int _startIndex;
   List<WiFiAccessPoint> _wifiApList;
 
-  Future<Uint8List> sendDataToCustomEndPoint(String path, Uint8List data) async {
+  Future<Uint8List> sendDataToCustomEndPoint(
+      String path, Uint8List data) async {
     if (_session == null || !_session.isSessionEstablished) {
       try {
         await _initSession();

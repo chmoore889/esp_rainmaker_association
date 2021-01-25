@@ -16,12 +16,34 @@ const SecSchemeVersion$json = const {
 const SessionData$json = const {
   '1': 'SessionData',
   '2': const [
-    const {'1': 'sec_ver', '3': 2, '4': 1, '5': 14, '6': '.espressif.SecSchemeVersion', '10': 'secVer'},
-    const {'1': 'sec0', '3': 10, '4': 1, '5': 11, '6': '.espressif.Sec0Payload', '9': 0, '10': 'sec0'},
-    const {'1': 'sec1', '3': 11, '4': 1, '5': 11, '6': '.espressif.Sec1Payload', '9': 0, '10': 'sec1'},
+    const {
+      '1': 'sec_ver',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.espressif.SecSchemeVersion',
+      '10': 'secVer'
+    },
+    const {
+      '1': 'sec0',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.Sec0Payload',
+      '9': 0,
+      '10': 'sec0'
+    },
+    const {
+      '1': 'sec1',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.espressif.Sec1Payload',
+      '9': 0,
+      '10': 'sec1'
+    },
   ],
   '8': const [
     const {'1': 'proto'},
   ],
 };
-

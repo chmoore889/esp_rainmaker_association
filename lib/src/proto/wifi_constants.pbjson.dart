@@ -39,10 +39,16 @@ const WifiConnectedState$json = const {
   '1': 'WifiConnectedState',
   '2': const [
     const {'1': 'ip4_addr', '3': 1, '4': 1, '5': 9, '10': 'ip4Addr'},
-    const {'1': 'auth_mode', '3': 2, '4': 1, '5': 14, '6': '.espressif.WifiAuthMode', '10': 'authMode'},
+    const {
+      '1': 'auth_mode',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.espressif.WifiAuthMode',
+      '10': 'authMode'
+    },
     const {'1': 'ssid', '3': 3, '4': 1, '5': 12, '10': 'ssid'},
     const {'1': 'bssid', '3': 4, '4': 1, '5': 12, '10': 'bssid'},
     const {'1': 'channel', '3': 5, '4': 1, '5': 5, '10': 'channel'},
   ],
 };
-

@@ -10,14 +10,38 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class WiFiConfigMsgType extends $pb.ProtobufEnum {
-  static const WiFiConfigMsgType TypeCmdGetStatus = WiFiConfigMsgType._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TypeCmdGetStatus');
-  static const WiFiConfigMsgType TypeRespGetStatus = WiFiConfigMsgType._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TypeRespGetStatus');
-  static const WiFiConfigMsgType TypeCmdSetConfig = WiFiConfigMsgType._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TypeCmdSetConfig');
-  static const WiFiConfigMsgType TypeRespSetConfig = WiFiConfigMsgType._(3, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TypeRespSetConfig');
-  static const WiFiConfigMsgType TypeCmdApplyConfig = WiFiConfigMsgType._(4, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TypeCmdApplyConfig');
-  static const WiFiConfigMsgType TypeRespApplyConfig = WiFiConfigMsgType._(5, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'TypeRespApplyConfig');
+  static const WiFiConfigMsgType TypeCmdGetStatus = WiFiConfigMsgType._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'TypeCmdGetStatus');
+  static const WiFiConfigMsgType TypeRespGetStatus = WiFiConfigMsgType._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'TypeRespGetStatus');
+  static const WiFiConfigMsgType TypeCmdSetConfig = WiFiConfigMsgType._(
+      2,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'TypeCmdSetConfig');
+  static const WiFiConfigMsgType TypeRespSetConfig = WiFiConfigMsgType._(
+      3,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'TypeRespSetConfig');
+  static const WiFiConfigMsgType TypeCmdApplyConfig = WiFiConfigMsgType._(
+      4,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'TypeCmdApplyConfig');
+  static const WiFiConfigMsgType TypeRespApplyConfig = WiFiConfigMsgType._(
+      5,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'TypeRespApplyConfig');
 
-  static const $core.List<WiFiConfigMsgType> values = <WiFiConfigMsgType> [
+  static const $core.List<WiFiConfigMsgType> values = <WiFiConfigMsgType>[
     TypeCmdGetStatus,
     TypeRespGetStatus,
     TypeCmdSetConfig,
@@ -26,9 +50,9 @@ class WiFiConfigMsgType extends $pb.ProtobufEnum {
     TypeRespApplyConfig,
   ];
 
-  static final $core.Map<$core.int, WiFiConfigMsgType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, WiFiConfigMsgType> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static WiFiConfigMsgType valueOf($core.int value) => _byValue[value];
 
   const WiFiConfigMsgType._($core.int v, $core.String n) : super(v, n);
 }
-

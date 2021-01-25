@@ -1,7 +1,7 @@
 ## Introduction
 A native dart implementation of ESP Rainmaker provisioning and user mapping.
 
-Currently only security 0 is supported and there are no plans to implement security 1.
+Currently only security 0 is supported and there are no plans to implement security 1, though pull requests would be welcome.
 
 ## Usage
 

@@ -11,6 +11,6 @@ class WiFiAccessPoint {
 
   @override
   String toString() {
-      return 'WiFiAccessPoint(wifiName: $wifiName, rssi: $rssi, security: $security)';
-    }
+    return 'WiFiAccessPoint(wifiName: $wifiName, rssi: $rssi, security: $security)';
+  }
 }

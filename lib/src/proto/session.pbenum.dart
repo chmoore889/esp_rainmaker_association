@@ -10,17 +10,25 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class SecSchemeVersion extends $pb.ProtobufEnum {
-  static const SecSchemeVersion SecScheme0 = SecSchemeVersion._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'SecScheme0');
-  static const SecSchemeVersion SecScheme1 = SecSchemeVersion._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'SecScheme1');
+  static const SecSchemeVersion SecScheme0 = SecSchemeVersion._(
+      0,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SecScheme0');
+  static const SecSchemeVersion SecScheme1 = SecSchemeVersion._(
+      1,
+      const $core.bool.fromEnvironment('protobuf.omit_enum_names')
+          ? ''
+          : 'SecScheme1');
 
-  static const $core.List<SecSchemeVersion> values = <SecSchemeVersion> [
+  static const $core.List<SecSchemeVersion> values = <SecSchemeVersion>[
     SecScheme0,
     SecScheme1,
   ];
 
-  static final $core.Map<$core.int, SecSchemeVersion> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static final $core.Map<$core.int, SecSchemeVersion> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
   static SecSchemeVersion valueOf($core.int value) => _byValue[value];
 
   const SecSchemeVersion._($core.int v, $core.String n) : super(v, n);
 }
-
