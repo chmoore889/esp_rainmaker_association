@@ -1,7 +1,7 @@
 name: esp_rainmaker_association
 description: Native dart implementation of ESP Rainmaker provisioning and user mapping.
 version: 0.0.1
-homepage: https://www.example.com
+homepage: https://github.com/chmoore889/esp_rainmaker_association
 
 environment:
   sdk: '>=2.10.0 <3.0.0'
