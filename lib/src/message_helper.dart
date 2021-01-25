@@ -42,7 +42,7 @@ class MessengeHelper {
     return payload.writeToBuffer();
   }
 
-  // Send Wi-Fi Config
+  /// Sends Wi-Fi Config.
   static Uint8List prepareWiFiConfigMsg(String ssid, String passphrase) {
     CmdSetConfig cmdSetConfig;
 
@@ -60,7 +60,7 @@ class MessengeHelper {
     return wiFiConfigPayload.writeToBuffer();
   }
 
-  // Apply Wi-Fi config
+  /// Applys Wi-Fi config.
   static Uint8List prepareApplyWiFiConfigMsg() {
     final cmdApplyConfig = CmdApplyConfig();
     final wiFiConfigPayload = WiFiConfigPayload()
