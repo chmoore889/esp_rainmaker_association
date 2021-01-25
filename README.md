@@ -30,4 +30,4 @@ Future<void> main() async {
 
 Please file feature requests and bugs at the [issue tracker][tracker].
 
-[tracker]: https://github.com/chmoore889/esp_rainmaker/issues
+[tracker]: https://github.com/chmoore889/esp_rainmaker_association/issues
