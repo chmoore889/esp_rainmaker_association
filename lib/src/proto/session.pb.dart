@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: session.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -48,7 +48,23 @@ class SessionData extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   SessionData._() : super();
-  factory SessionData() => create();
+  factory SessionData({
+    SecSchemeVersion? secVer,
+    $0.Sec0Payload? sec0,
+    $1.Sec1Payload? sec1,
+  }) {
+    final _result = create();
+    if (secVer != null) {
+      _result.secVer = secVer;
+    }
+    if (sec0 != null) {
+      _result.sec0 = sec0;
+    }
+    if (sec1 != null) {
+      _result.sec1 = sec1;
+    }
+    return _result;
+  }
   factory SessionData.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -63,8 +79,8 @@ class SessionData extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   SessionData copyWith(void Function(SessionData) updates) =>
-      super.copyWith((message) =>
-          updates(message as SessionData)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as SessionData))
+          as SessionData; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SessionData create() => SessionData._();
@@ -73,9 +89,9 @@ class SessionData extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SessionData getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SessionData>(create);
-  static SessionData _defaultInstance;
+  static SessionData? _defaultInstance;
 
-  SessionData_Proto whichProto() => _SessionData_ProtoByTag[$_whichOneof(0)];
+  SessionData_Proto whichProto() => _SessionData_ProtoByTag[$_whichOneof(0)]!;
   void clearProto() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(2)

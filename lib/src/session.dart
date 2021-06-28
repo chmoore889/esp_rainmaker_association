@@ -5,19 +5,16 @@ import 'package:esp_rainmaker_association/src/security0.dart';
 import 'package:esp_rainmaker_association/src/softAPTransport.dart';
 
 class Session {
-  SoftAPTransport transport;
-  Security0 security;
-  bool isSessionEstablished;
+  final SoftAPTransport transport;
+  final Security0 security;
+  bool isSessionEstablished = false;
 
-  Session(SoftAPTransport transport, Security0 security) {
-    this.transport = transport;
-    this.security = security;
-  }
+  Session(this.transport, this.security);
 
-  Future<void> init(Uint8List response) async {
+  Future<void> init(Uint8List? response) async {
     //print(response);
     try {
-      final request = await security.getNextRequestInSession(response);
+      final request = security.getNextRequestInSession(response);
       //print(request);
 
       if (request == null) {
@@ -26,11 +23,7 @@ class Session {
         final returnData = await transport.sendConfigData(
             ESPConstants.HANDLER_PROV_SESSION, request);
         //print(returnData);
-        if (returnData == null) {
-          throw 'Session could not be established';
-        } else {
-          await init(returnData);
-        }
+        await init(returnData);
       }
     } catch (e) {
       //print(e);
@@ -39,7 +32,7 @@ class Session {
   }
 
   Future<Uint8List> sendDataToDevice(final String path, Uint8List data) async {
-    final encryptedData = await security.encrypt(data);
+    final encryptedData = security.encrypt(data);
 
     if (isSessionEstablished) {
       Uint8List returnData;
@@ -50,7 +43,7 @@ class Session {
         //print(e);
         rethrow;
       }
-      return await security.decrypt(returnData);
+      return security.decrypt(returnData);
     } else {
       await init(null);
 

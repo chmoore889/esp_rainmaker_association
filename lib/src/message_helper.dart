@@ -44,15 +44,9 @@ class MessengeHelper {
 
   /// Sends Wi-Fi Config.
   static Uint8List prepareWiFiConfigMsg(String ssid, String passphrase) {
-    CmdSetConfig cmdSetConfig;
-
-    if (passphrase != null) {
-      cmdSetConfig = CmdSetConfig()
-        ..ssid = utf8.encode(ssid)
-        ..passphrase = utf8.encode(passphrase);
-    } else {
-      cmdSetConfig = CmdSetConfig()..ssid = utf8.encode(ssid);
-    }
+    final cmdSetConfig = CmdSetConfig()
+      ..ssid = utf8.encode(ssid)
+      ..passphrase = utf8.encode(passphrase);
     final wiFiConfigPayload = WiFiConfigPayload()
       ..cmdSetConfig = cmdSetConfig
       ..msg = WiFiConfigMsgType.TypeCmdSetConfig;

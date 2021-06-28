@@ -9,8 +9,8 @@ class Security0 {
 
   int _sessionState = SESSION_STATE_0;
 
-  Uint8List getNextRequestInSession(Uint8List hexData) {
-    Uint8List response;
+  Uint8List? getNextRequestInSession(Uint8List? hexData) {
+    Uint8List? response;
     switch (_sessionState) {
       case SESSION_STATE_0:
         _sessionState = SESSION_STATE_1;
@@ -41,7 +41,7 @@ class Security0 {
     return newSessionData.writeToBuffer();
   }
 
-  void _processStep0Response(Uint8List hexData) {
+  void _processStep0Response(Uint8List? hexData) {
     try {
       if (hexData == null) {
         throw 'No response from device';

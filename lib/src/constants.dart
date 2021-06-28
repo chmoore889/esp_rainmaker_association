@@ -1,5 +1,5 @@
 class ESPConstants {
-  static final String DEFAULT_WIFI_BASE_URL = '192.168.4.1:80';
+  static const String DEFAULT_WIFI_BASE_URL = '192.168.4.1:80';
 
   // End point names
   static const String HANDLER_PROV_SCAN = 'prov-scan';

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: sec1.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -33,7 +33,15 @@ class SessionCmd1 extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   SessionCmd1._() : super();
-  factory SessionCmd1() => create();
+  factory SessionCmd1({
+    $core.List<$core.int>? clientVerifyData,
+  }) {
+    final _result = create();
+    if (clientVerifyData != null) {
+      _result.clientVerifyData = clientVerifyData;
+    }
+    return _result;
+  }
   factory SessionCmd1.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -48,8 +56,8 @@ class SessionCmd1 extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   SessionCmd1 copyWith(void Function(SessionCmd1) updates) =>
-      super.copyWith((message) =>
-          updates(message as SessionCmd1)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as SessionCmd1))
+          as SessionCmd1; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SessionCmd1 create() => SessionCmd1._();
@@ -58,7 +66,7 @@ class SessionCmd1 extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SessionCmd1 getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SessionCmd1>(create);
-  static SessionCmd1 _defaultInstance;
+  static SessionCmd1? _defaultInstance;
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get clientVerifyData => $_getN(0);
@@ -99,7 +107,19 @@ class SessionResp1 extends $pb.GeneratedMessage {
         ..hasRequiredFields = false;
 
   SessionResp1._() : super();
-  factory SessionResp1() => create();
+  factory SessionResp1({
+    $0.Status? status,
+    $core.List<$core.int>? deviceVerifyData,
+  }) {
+    final _result = create();
+    if (status != null) {
+      _result.status = status;
+    }
+    if (deviceVerifyData != null) {
+      _result.deviceVerifyData = deviceVerifyData;
+    }
+    return _result;
+  }
   factory SessionResp1.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -114,8 +134,8 @@ class SessionResp1 extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   SessionResp1 copyWith(void Function(SessionResp1) updates) =>
-      super.copyWith((message) =>
-          updates(message as SessionResp1)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as SessionResp1))
+          as SessionResp1; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SessionResp1 create() => SessionResp1._();
@@ -125,7 +145,7 @@ class SessionResp1 extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SessionResp1 getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SessionResp1>(create);
-  static SessionResp1 _defaultInstance;
+  static SessionResp1? _defaultInstance;
 
   @$pb.TagNumber(1)
   $0.Status get status => $_getN(0);
@@ -171,7 +191,15 @@ class SessionCmd0 extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   SessionCmd0._() : super();
-  factory SessionCmd0() => create();
+  factory SessionCmd0({
+    $core.List<$core.int>? clientPubkey,
+  }) {
+    final _result = create();
+    if (clientPubkey != null) {
+      _result.clientPubkey = clientPubkey;
+    }
+    return _result;
+  }
   factory SessionCmd0.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -186,8 +214,8 @@ class SessionCmd0 extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   SessionCmd0 copyWith(void Function(SessionCmd0) updates) =>
-      super.copyWith((message) =>
-          updates(message as SessionCmd0)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as SessionCmd0))
+          as SessionCmd0; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SessionCmd0 create() => SessionCmd0._();
@@ -196,7 +224,7 @@ class SessionCmd0 extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SessionCmd0 getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SessionCmd0>(create);
-  static SessionCmd0 _defaultInstance;
+  static SessionCmd0? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get clientPubkey => $_getN(0);
@@ -236,7 +264,23 @@ class SessionResp0 extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   SessionResp0._() : super();
-  factory SessionResp0() => create();
+  factory SessionResp0({
+    $0.Status? status,
+    $core.List<$core.int>? devicePubkey,
+    $core.List<$core.int>? deviceRandom,
+  }) {
+    final _result = create();
+    if (status != null) {
+      _result.status = status;
+    }
+    if (devicePubkey != null) {
+      _result.devicePubkey = devicePubkey;
+    }
+    if (deviceRandom != null) {
+      _result.deviceRandom = deviceRandom;
+    }
+    return _result;
+  }
   factory SessionResp0.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -251,8 +295,8 @@ class SessionResp0 extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   SessionResp0 copyWith(void Function(SessionResp0) updates) =>
-      super.copyWith((message) =>
-          updates(message as SessionResp0)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as SessionResp0))
+          as SessionResp0; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SessionResp0 create() => SessionResp0._();
@@ -262,7 +306,7 @@ class SessionResp0 extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SessionResp0 getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SessionResp0>(create);
-  static SessionResp0 _defaultInstance;
+  static SessionResp0? _defaultInstance;
 
   @$pb.TagNumber(1)
   $0.Status get status => $_getN(0);
@@ -336,7 +380,31 @@ class Sec1Payload extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   Sec1Payload._() : super();
-  factory Sec1Payload() => create();
+  factory Sec1Payload({
+    Sec1MsgType? msg,
+    SessionCmd0? sc0,
+    SessionResp0? sr0,
+    SessionCmd1? sc1,
+    SessionResp1? sr1,
+  }) {
+    final _result = create();
+    if (msg != null) {
+      _result.msg = msg;
+    }
+    if (sc0 != null) {
+      _result.sc0 = sc0;
+    }
+    if (sr0 != null) {
+      _result.sr0 = sr0;
+    }
+    if (sc1 != null) {
+      _result.sc1 = sc1;
+    }
+    if (sr1 != null) {
+      _result.sr1 = sr1;
+    }
+    return _result;
+  }
   factory Sec1Payload.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -351,8 +419,8 @@ class Sec1Payload extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Sec1Payload copyWith(void Function(Sec1Payload) updates) =>
-      super.copyWith((message) =>
-          updates(message as Sec1Payload)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Sec1Payload))
+          as Sec1Payload; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Sec1Payload create() => Sec1Payload._();
@@ -361,10 +429,10 @@ class Sec1Payload extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Sec1Payload getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Sec1Payload>(create);
-  static Sec1Payload _defaultInstance;
+  static Sec1Payload? _defaultInstance;
 
   Sec1Payload_Payload whichPayload() =>
-      _Sec1Payload_PayloadByTag[$_whichOneof(0)];
+      _Sec1Payload_PayloadByTag[$_whichOneof(0)]!;
   void clearPayload() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)

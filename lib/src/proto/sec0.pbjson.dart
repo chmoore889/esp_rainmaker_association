@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: sec0.proto
 //
-// @dart = 2.3
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use sec0MsgTypeDescriptor instead')
 const Sec0MsgType$json = const {
   '1': 'Sec0MsgType',
   '2': const [
@@ -13,10 +18,18 @@ const Sec0MsgType$json = const {
   ],
 };
 
+/// Descriptor for `Sec0MsgType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List sec0MsgTypeDescriptor = $convert.base64Decode(
+    'CgtTZWMwTXNnVHlwZRIWChJTMF9TZXNzaW9uX0NvbW1hbmQQABIXChNTMF9TZXNzaW9uX1Jlc3BvbnNlEAE=');
+@$core.Deprecated('Use s0SessionCmdDescriptor instead')
 const S0SessionCmd$json = const {
   '1': 'S0SessionCmd',
 };
 
+/// Descriptor for `S0SessionCmd`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List s0SessionCmdDescriptor =
+    $convert.base64Decode('CgxTMFNlc3Npb25DbWQ=');
+@$core.Deprecated('Use s0SessionRespDescriptor instead')
 const S0SessionResp$json = const {
   '1': 'S0SessionResp',
   '2': const [
@@ -31,6 +44,10 @@ const S0SessionResp$json = const {
   ],
 };
 
+/// Descriptor for `S0SessionResp`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List s0SessionRespDescriptor = $convert.base64Decode(
+    'Cg1TMFNlc3Npb25SZXNwEikKBnN0YXR1cxgBIAEoDjIRLmVzcHJlc3NpZi5TdGF0dXNSBnN0YXR1cw==');
+@$core.Deprecated('Use sec0PayloadDescriptor instead')
 const Sec0Payload$json = const {
   '1': 'Sec0Payload',
   '2': const [
@@ -65,3 +82,7 @@ const Sec0Payload$json = const {
     const {'1': 'payload'},
   ],
 };
+
+/// Descriptor for `Sec0Payload`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sec0PayloadDescriptor = $convert.base64Decode(
+    'CgtTZWMwUGF5bG9hZBIoCgNtc2cYASABKA4yFi5lc3ByZXNzaWYuU2VjME1zZ1R5cGVSA21zZxIpCgJzYxgUIAEoCzIXLmVzcHJlc3NpZi5TMFNlc3Npb25DbWRIAFICc2MSKgoCc3IYFSABKAsyGC5lc3ByZXNzaWYuUzBTZXNzaW9uUmVzcEgAUgJzckIJCgdwYXlsb2Fk');

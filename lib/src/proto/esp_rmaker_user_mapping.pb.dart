@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: esp_rmaker_user_mapping.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -35,7 +35,19 @@ class CmdSetUserMapping extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   CmdSetUserMapping._() : super();
-  factory CmdSetUserMapping() => create();
+  factory CmdSetUserMapping({
+    $core.String? userID,
+    $core.String? secretKey,
+  }) {
+    final _result = create();
+    if (userID != null) {
+      _result.userID = userID;
+    }
+    if (secretKey != null) {
+      _result.secretKey = secretKey;
+    }
+    return _result;
+  }
   factory CmdSetUserMapping.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -50,8 +62,8 @@ class CmdSetUserMapping extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   CmdSetUserMapping copyWith(void Function(CmdSetUserMapping) updates) =>
-      super.copyWith((message) => updates(
-          message as CmdSetUserMapping)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as CmdSetUserMapping))
+          as CmdSetUserMapping; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CmdSetUserMapping create() => CmdSetUserMapping._();
@@ -61,7 +73,7 @@ class CmdSetUserMapping extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static CmdSetUserMapping getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CmdSetUserMapping>(create);
-  static CmdSetUserMapping _defaultInstance;
+  static CmdSetUserMapping? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get userID => $_getSZ(0);
@@ -114,7 +126,19 @@ class RespSetUserMapping extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   RespSetUserMapping._() : super();
-  factory RespSetUserMapping() => create();
+  factory RespSetUserMapping({
+    RMakerConfigStatus? status,
+    $core.String? nodeId,
+  }) {
+    final _result = create();
+    if (status != null) {
+      _result.status = status;
+    }
+    if (nodeId != null) {
+      _result.nodeId = nodeId;
+    }
+    return _result;
+  }
   factory RespSetUserMapping.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -129,8 +153,8 @@ class RespSetUserMapping extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   RespSetUserMapping copyWith(void Function(RespSetUserMapping) updates) =>
-      super.copyWith((message) => updates(
-          message as RespSetUserMapping)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as RespSetUserMapping))
+          as RespSetUserMapping; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RespSetUserMapping create() => RespSetUserMapping._();
@@ -140,7 +164,7 @@ class RespSetUserMapping extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static RespSetUserMapping getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RespSetUserMapping>(create);
-  static RespSetUserMapping _defaultInstance;
+  static RespSetUserMapping? _defaultInstance;
 
   @$pb.TagNumber(1)
   RMakerConfigStatus get status => $_getN(0);
@@ -202,7 +226,23 @@ class RMakerConfigPayload extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   RMakerConfigPayload._() : super();
-  factory RMakerConfigPayload() => create();
+  factory RMakerConfigPayload({
+    RMakerConfigMsgType? msg,
+    CmdSetUserMapping? cmdSetUserMapping,
+    RespSetUserMapping? respSetUserMapping,
+  }) {
+    final _result = create();
+    if (msg != null) {
+      _result.msg = msg;
+    }
+    if (cmdSetUserMapping != null) {
+      _result.cmdSetUserMapping = cmdSetUserMapping;
+    }
+    if (respSetUserMapping != null) {
+      _result.respSetUserMapping = respSetUserMapping;
+    }
+    return _result;
+  }
   factory RMakerConfigPayload.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -217,8 +257,8 @@ class RMakerConfigPayload extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   RMakerConfigPayload copyWith(void Function(RMakerConfigPayload) updates) =>
-      super.copyWith((message) => updates(
-          message as RMakerConfigPayload)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as RMakerConfigPayload))
+          as RMakerConfigPayload; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RMakerConfigPayload create() => RMakerConfigPayload._();
@@ -228,10 +268,10 @@ class RMakerConfigPayload extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static RMakerConfigPayload getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RMakerConfigPayload>(create);
-  static RMakerConfigPayload _defaultInstance;
+  static RMakerConfigPayload? _defaultInstance;
 
   RMakerConfigPayload_Payload whichPayload() =>
-      _RMakerConfigPayload_PayloadByTag[$_whichOneof(0)];
+      _RMakerConfigPayload_PayloadByTag[$_whichOneof(0)]!;
   void clearPayload() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: wifi_constants.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -42,7 +42,31 @@ class WifiConnectedState extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   WifiConnectedState._() : super();
-  factory WifiConnectedState() => create();
+  factory WifiConnectedState({
+    $core.String? ip4Addr,
+    WifiAuthMode? authMode,
+    $core.List<$core.int>? ssid,
+    $core.List<$core.int>? bssid,
+    $core.int? channel,
+  }) {
+    final _result = create();
+    if (ip4Addr != null) {
+      _result.ip4Addr = ip4Addr;
+    }
+    if (authMode != null) {
+      _result.authMode = authMode;
+    }
+    if (ssid != null) {
+      _result.ssid = ssid;
+    }
+    if (bssid != null) {
+      _result.bssid = bssid;
+    }
+    if (channel != null) {
+      _result.channel = channel;
+    }
+    return _result;
+  }
   factory WifiConnectedState.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -57,8 +81,8 @@ class WifiConnectedState extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   WifiConnectedState copyWith(void Function(WifiConnectedState) updates) =>
-      super.copyWith((message) => updates(
-          message as WifiConnectedState)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as WifiConnectedState))
+          as WifiConnectedState; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static WifiConnectedState create() => WifiConnectedState._();
@@ -68,7 +92,7 @@ class WifiConnectedState extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static WifiConnectedState getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WifiConnectedState>(create);
-  static WifiConnectedState _defaultInstance;
+  static WifiConnectedState? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ip4Addr => $_getSZ(0);

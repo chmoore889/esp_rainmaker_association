@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: wifi_scan.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
@@ -46,7 +46,27 @@ class CmdScanStart extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   CmdScanStart._() : super();
-  factory CmdScanStart() => create();
+  factory CmdScanStart({
+    $core.bool? blocking,
+    $core.bool? passive,
+    $core.int? groupChannels,
+    $core.int? periodMs,
+  }) {
+    final _result = create();
+    if (blocking != null) {
+      _result.blocking = blocking;
+    }
+    if (passive != null) {
+      _result.passive = passive;
+    }
+    if (groupChannels != null) {
+      _result.groupChannels = groupChannels;
+    }
+    if (periodMs != null) {
+      _result.periodMs = periodMs;
+    }
+    return _result;
+  }
   factory CmdScanStart.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -61,8 +81,8 @@ class CmdScanStart extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   CmdScanStart copyWith(void Function(CmdScanStart) updates) =>
-      super.copyWith((message) =>
-          updates(message as CmdScanStart)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as CmdScanStart))
+          as CmdScanStart; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CmdScanStart create() => CmdScanStart._();
@@ -72,7 +92,7 @@ class CmdScanStart extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static CmdScanStart getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CmdScanStart>(create);
-  static CmdScanStart _defaultInstance;
+  static CmdScanStart? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.bool get blocking => $_getBF(0);
@@ -151,8 +171,8 @@ class RespScanStart extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   RespScanStart copyWith(void Function(RespScanStart) updates) =>
-      super.copyWith((message) =>
-          updates(message as RespScanStart)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as RespScanStart))
+          as RespScanStart; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RespScanStart create() => RespScanStart._();
@@ -162,7 +182,7 @@ class RespScanStart extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static RespScanStart getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RespScanStart>(create);
-  static RespScanStart _defaultInstance;
+  static RespScanStart? _defaultInstance;
 }
 
 class CmdScanStatus extends $pb.GeneratedMessage {
@@ -193,8 +213,8 @@ class CmdScanStatus extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   CmdScanStatus copyWith(void Function(CmdScanStatus) updates) =>
-      super.copyWith((message) =>
-          updates(message as CmdScanStatus)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as CmdScanStatus))
+          as CmdScanStatus; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CmdScanStatus create() => CmdScanStatus._();
@@ -204,7 +224,7 @@ class CmdScanStatus extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static CmdScanStatus getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CmdScanStatus>(create);
-  static CmdScanStatus _defaultInstance;
+  static CmdScanStatus? _defaultInstance;
 }
 
 class RespScanStatus extends $pb.GeneratedMessage {
@@ -231,7 +251,19 @@ class RespScanStatus extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   RespScanStatus._() : super();
-  factory RespScanStatus() => create();
+  factory RespScanStatus({
+    $core.bool? scanFinished,
+    $core.int? resultCount,
+  }) {
+    final _result = create();
+    if (scanFinished != null) {
+      _result.scanFinished = scanFinished;
+    }
+    if (resultCount != null) {
+      _result.resultCount = resultCount;
+    }
+    return _result;
+  }
   factory RespScanStatus.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -246,8 +278,8 @@ class RespScanStatus extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   RespScanStatus copyWith(void Function(RespScanStatus) updates) =>
-      super.copyWith((message) =>
-          updates(message as RespScanStatus)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as RespScanStatus))
+          as RespScanStatus; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RespScanStatus create() => RespScanStatus._();
@@ -257,7 +289,7 @@ class RespScanStatus extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static RespScanStatus getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RespScanStatus>(create);
-  static RespScanStatus _defaultInstance;
+  static RespScanStatus? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.bool get scanFinished => $_getBF(0);
@@ -309,7 +341,19 @@ class CmdScanResult extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   CmdScanResult._() : super();
-  factory CmdScanResult() => create();
+  factory CmdScanResult({
+    $core.int? startIndex,
+    $core.int? count,
+  }) {
+    final _result = create();
+    if (startIndex != null) {
+      _result.startIndex = startIndex;
+    }
+    if (count != null) {
+      _result.count = count;
+    }
+    return _result;
+  }
   factory CmdScanResult.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -324,8 +368,8 @@ class CmdScanResult extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   CmdScanResult copyWith(void Function(CmdScanResult) updates) =>
-      super.copyWith((message) =>
-          updates(message as CmdScanResult)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as CmdScanResult))
+          as CmdScanResult; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CmdScanResult create() => CmdScanResult._();
@@ -335,7 +379,7 @@ class CmdScanResult extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static CmdScanResult getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CmdScanResult>(create);
-  static CmdScanResult _defaultInstance;
+  static CmdScanResult? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get startIndex => $_getIZ(0);
@@ -391,7 +435,31 @@ class WiFiScanResult extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   WiFiScanResult._() : super();
-  factory WiFiScanResult() => create();
+  factory WiFiScanResult({
+    $core.List<$core.int>? ssid,
+    $core.int? channel,
+    $core.int? rssi,
+    $core.List<$core.int>? bssid,
+    $0.WifiAuthMode? auth,
+  }) {
+    final _result = create();
+    if (ssid != null) {
+      _result.ssid = ssid;
+    }
+    if (channel != null) {
+      _result.channel = channel;
+    }
+    if (rssi != null) {
+      _result.rssi = rssi;
+    }
+    if (bssid != null) {
+      _result.bssid = bssid;
+    }
+    if (auth != null) {
+      _result.auth = auth;
+    }
+    return _result;
+  }
   factory WiFiScanResult.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -406,8 +474,8 @@ class WiFiScanResult extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   WiFiScanResult copyWith(void Function(WiFiScanResult) updates) =>
-      super.copyWith((message) =>
-          updates(message as WiFiScanResult)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as WiFiScanResult))
+          as WiFiScanResult; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static WiFiScanResult create() => WiFiScanResult._();
@@ -417,7 +485,7 @@ class WiFiScanResult extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static WiFiScanResult getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WiFiScanResult>(create);
-  static WiFiScanResult _defaultInstance;
+  static WiFiScanResult? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get ssid => $_getN(0);
@@ -500,7 +568,15 @@ class RespScanResult extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   RespScanResult._() : super();
-  factory RespScanResult() => create();
+  factory RespScanResult({
+    $core.Iterable<WiFiScanResult>? entries,
+  }) {
+    final _result = create();
+    if (entries != null) {
+      _result.entries.addAll(entries);
+    }
+    return _result;
+  }
   factory RespScanResult.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -515,8 +591,8 @@ class RespScanResult extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   RespScanResult copyWith(void Function(RespScanResult) updates) =>
-      super.copyWith((message) =>
-          updates(message as RespScanResult)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as RespScanResult))
+          as RespScanResult; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RespScanResult create() => RespScanResult._();
@@ -526,7 +602,7 @@ class RespScanResult extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static RespScanResult getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RespScanResult>(create);
-  static RespScanResult _defaultInstance;
+  static RespScanResult? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<WiFiScanResult> get entries => $_getList(0);
@@ -582,7 +658,43 @@ class WiFiScanPayload extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   WiFiScanPayload._() : super();
-  factory WiFiScanPayload() => create();
+  factory WiFiScanPayload({
+    WiFiScanMsgType? msg,
+    $1.Status? status,
+    CmdScanStart? cmdScanStart,
+    RespScanStart? respScanStart,
+    CmdScanStatus? cmdScanStatus,
+    RespScanStatus? respScanStatus,
+    CmdScanResult? cmdScanResult,
+    RespScanResult? respScanResult,
+  }) {
+    final _result = create();
+    if (msg != null) {
+      _result.msg = msg;
+    }
+    if (status != null) {
+      _result.status = status;
+    }
+    if (cmdScanStart != null) {
+      _result.cmdScanStart = cmdScanStart;
+    }
+    if (respScanStart != null) {
+      _result.respScanStart = respScanStart;
+    }
+    if (cmdScanStatus != null) {
+      _result.cmdScanStatus = cmdScanStatus;
+    }
+    if (respScanStatus != null) {
+      _result.respScanStatus = respScanStatus;
+    }
+    if (cmdScanResult != null) {
+      _result.cmdScanResult = cmdScanResult;
+    }
+    if (respScanResult != null) {
+      _result.respScanResult = respScanResult;
+    }
+    return _result;
+  }
   factory WiFiScanPayload.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
@@ -597,8 +709,8 @@ class WiFiScanPayload extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   WiFiScanPayload copyWith(void Function(WiFiScanPayload) updates) =>
-      super.copyWith((message) =>
-          updates(message as WiFiScanPayload)); // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as WiFiScanPayload))
+          as WiFiScanPayload; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static WiFiScanPayload create() => WiFiScanPayload._();
@@ -608,10 +720,10 @@ class WiFiScanPayload extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static WiFiScanPayload getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<WiFiScanPayload>(create);
-  static WiFiScanPayload _defaultInstance;
+  static WiFiScanPayload? _defaultInstance;
 
   WiFiScanPayload_Payload whichPayload() =>
-      _WiFiScanPayload_PayloadByTag[$_whichOneof(0)];
+      _WiFiScanPayload_PayloadByTag[$_whichOneof(0)]!;
   void clearPayload() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)

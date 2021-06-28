@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: wifi_scan.proto
 //
-// @dart = 2.3
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use wiFiScanMsgTypeDescriptor instead')
 const WiFiScanMsgType$json = const {
   '1': 'WiFiScanMsgType',
   '2': const [
@@ -17,6 +22,10 @@ const WiFiScanMsgType$json = const {
   ],
 };
 
+/// Descriptor for `WiFiScanMsgType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List wiFiScanMsgTypeDescriptor = $convert.base64Decode(
+    'Cg9XaUZpU2Nhbk1zZ1R5cGUSFAoQVHlwZUNtZFNjYW5TdGFydBAAEhUKEVR5cGVSZXNwU2NhblN0YXJ0EAESFQoRVHlwZUNtZFNjYW5TdGF0dXMQAhIWChJUeXBlUmVzcFNjYW5TdGF0dXMQAxIVChFUeXBlQ21kU2NhblJlc3VsdBAEEhYKElR5cGVSZXNwU2NhblJlc3VsdBAF');
+@$core.Deprecated('Use cmdScanStartDescriptor instead')
 const CmdScanStart$json = const {
   '1': 'CmdScanStart',
   '2': const [
@@ -33,14 +42,26 @@ const CmdScanStart$json = const {
   ],
 };
 
+/// Descriptor for `CmdScanStart`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cmdScanStartDescriptor = $convert.base64Decode(
+    'CgxDbWRTY2FuU3RhcnQSGgoIYmxvY2tpbmcYASABKAhSCGJsb2NraW5nEhgKB3Bhc3NpdmUYAiABKAhSB3Bhc3NpdmUSJQoOZ3JvdXBfY2hhbm5lbHMYAyABKA1SDWdyb3VwQ2hhbm5lbHMSGwoJcGVyaW9kX21zGAQgASgNUghwZXJpb2RNcw==');
+@$core.Deprecated('Use respScanStartDescriptor instead')
 const RespScanStart$json = const {
   '1': 'RespScanStart',
 };
 
+/// Descriptor for `RespScanStart`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List respScanStartDescriptor =
+    $convert.base64Decode('Cg1SZXNwU2NhblN0YXJ0');
+@$core.Deprecated('Use cmdScanStatusDescriptor instead')
 const CmdScanStatus$json = const {
   '1': 'CmdScanStatus',
 };
 
+/// Descriptor for `CmdScanStatus`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cmdScanStatusDescriptor =
+    $convert.base64Decode('Cg1DbWRTY2FuU3RhdHVz');
+@$core.Deprecated('Use respScanStatusDescriptor instead')
 const RespScanStatus$json = const {
   '1': 'RespScanStatus',
   '2': const [
@@ -49,6 +70,10 @@ const RespScanStatus$json = const {
   ],
 };
 
+/// Descriptor for `RespScanStatus`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List respScanStatusDescriptor = $convert.base64Decode(
+    'Cg5SZXNwU2NhblN0YXR1cxIjCg1zY2FuX2ZpbmlzaGVkGAEgASgIUgxzY2FuRmluaXNoZWQSIQoMcmVzdWx0X2NvdW50GAIgASgNUgtyZXN1bHRDb3VudA==');
+@$core.Deprecated('Use cmdScanResultDescriptor instead')
 const CmdScanResult$json = const {
   '1': 'CmdScanResult',
   '2': const [
@@ -57,6 +82,10 @@ const CmdScanResult$json = const {
   ],
 };
 
+/// Descriptor for `CmdScanResult`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cmdScanResultDescriptor = $convert.base64Decode(
+    'Cg1DbWRTY2FuUmVzdWx0Eh8KC3N0YXJ0X2luZGV4GAEgASgNUgpzdGFydEluZGV4EhQKBWNvdW50GAIgASgNUgVjb3VudA==');
+@$core.Deprecated('Use wiFiScanResultDescriptor instead')
 const WiFiScanResult$json = const {
   '1': 'WiFiScanResult',
   '2': const [
@@ -75,6 +104,10 @@ const WiFiScanResult$json = const {
   ],
 };
 
+/// Descriptor for `WiFiScanResult`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List wiFiScanResultDescriptor = $convert.base64Decode(
+    'Cg5XaUZpU2NhblJlc3VsdBISCgRzc2lkGAEgASgMUgRzc2lkEhgKB2NoYW5uZWwYAiABKA1SB2NoYW5uZWwSEgoEcnNzaRgDIAEoBVIEcnNzaRIUCgVic3NpZBgEIAEoDFIFYnNzaWQSKwoEYXV0aBgFIAEoDjIXLmVzcHJlc3NpZi5XaWZpQXV0aE1vZGVSBGF1dGg=');
+@$core.Deprecated('Use respScanResultDescriptor instead')
 const RespScanResult$json = const {
   '1': 'RespScanResult',
   '2': const [
@@ -89,6 +122,10 @@ const RespScanResult$json = const {
   ],
 };
 
+/// Descriptor for `RespScanResult`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List respScanResultDescriptor = $convert.base64Decode(
+    'Cg5SZXNwU2NhblJlc3VsdBIzCgdlbnRyaWVzGAEgAygLMhkuZXNwcmVzc2lmLldpRmlTY2FuUmVzdWx0UgdlbnRyaWVz');
+@$core.Deprecated('Use wiFiScanPayloadDescriptor instead')
 const WiFiScanPayload$json = const {
   '1': 'WiFiScanPayload',
   '2': const [
@@ -167,3 +204,7 @@ const WiFiScanPayload$json = const {
     const {'1': 'payload'},
   ],
 };
+
+/// Descriptor for `WiFiScanPayload`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List wiFiScanPayloadDescriptor = $convert.base64Decode(
+    'Cg9XaUZpU2NhblBheWxvYWQSLAoDbXNnGAEgASgOMhouZXNwcmVzc2lmLldpRmlTY2FuTXNnVHlwZVIDbXNnEikKBnN0YXR1cxgCIAEoDjIRLmVzcHJlc3NpZi5TdGF0dXNSBnN0YXR1cxI/Cg5jbWRfc2Nhbl9zdGFydBgKIAEoCzIXLmVzcHJlc3NpZi5DbWRTY2FuU3RhcnRIAFIMY21kU2NhblN0YXJ0EkIKD3Jlc3Bfc2Nhbl9zdGFydBgLIAEoCzIYLmVzcHJlc3NpZi5SZXNwU2NhblN0YXJ0SABSDXJlc3BTY2FuU3RhcnQSQgoPY21kX3NjYW5fc3RhdHVzGAwgASgLMhguZXNwcmVzc2lmLkNtZFNjYW5TdGF0dXNIAFINY21kU2NhblN0YXR1cxJFChByZXNwX3NjYW5fc3RhdHVzGA0gASgLMhkuZXNwcmVzc2lmLlJlc3BTY2FuU3RhdHVzSABSDnJlc3BTY2FuU3RhdHVzEkIKD2NtZF9zY2FuX3Jlc3VsdBgOIAEoCzIYLmVzcHJlc3NpZi5DbWRTY2FuUmVzdWx0SABSDWNtZFNjYW5SZXN1bHQSRQoQcmVzcF9zY2FuX3Jlc3VsdBgPIAEoCzIZLmVzcHJlc3NpZi5SZXNwU2NhblJlc3VsdEgAUg5yZXNwU2NhblJlc3VsdEIJCgdwYXlsb2Fk');

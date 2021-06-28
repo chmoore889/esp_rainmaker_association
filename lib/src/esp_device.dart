@@ -13,14 +13,14 @@ import 'package:esp_rainmaker_association/src/softAPTransport.dart';
 import 'package:esp_rainmaker_association/src/wifi_access_point.dart';
 
 class EspDevice {
-  Session _session;
-  int _totalCount;
-  int _startIndex;
-  List<WiFiAccessPoint> _wifiApList;
+  Session? _session;
+  late int _totalCount;
+  late int _startIndex;
+  late List<WiFiAccessPoint> _wifiApList;
 
   Future<Uint8List> sendDataToCustomEndPoint(
       String path, Uint8List data) async {
-    if (_session == null || !_session.isSessionEstablished) {
+    if (_session == null || !_session!.isSessionEstablished) {
       try {
         await _initSession();
       } catch (e) {
@@ -35,7 +35,7 @@ class EspDevice {
   }
 
   Future<void> provision(String ssid, String passphrase) async {
-    if (_session == null || !_session.isSessionEstablished) {
+    if (_session == null || !_session!.isSessionEstablished) {
       try {
         await _initSession();
       } catch (e) {
@@ -51,7 +51,7 @@ class EspDevice {
   Future<List<WiFiAccessPoint>> scanNetworks() async {
     //print('Send Wi-Fi scan command to device');
 
-    if (_session == null || !_session.isSessionEstablished) {
+    if (_session == null || !_session!.isSessionEstablished) {
       try {
         await _initSession();
       } catch (e) {
@@ -72,8 +72,8 @@ class EspDevice {
 
     Uint8List scanReturnData;
     try {
-      scanReturnData = await _session.sendDataToDevice(
-          ESPConstants.HANDLER_PROV_SCAN, scanCommand);
+      scanReturnData = await _session!
+          .sendDataToDevice(ESPConstants.HANDLER_PROV_SCAN, scanCommand);
     } catch (e) {
       //print(e);
       rethrow;
@@ -83,10 +83,10 @@ class EspDevice {
 
     final getScanStatusCmd = MessengeHelper.prepareGetWiFiScanStatusMsg();
 
-    Uint8List statusReturnData;
+    Uint8List? statusReturnData;
     try {
-      statusReturnData = await _session.sendDataToDevice(
-          ESPConstants.HANDLER_PROV_SCAN, getScanStatusCmd);
+      statusReturnData = await _session!
+          .sendDataToDevice(ESPConstants.HANDLER_PROV_SCAN, getScanStatusCmd);
     } catch (e) {
       //print(e);
       rethrow;
@@ -97,10 +97,10 @@ class EspDevice {
   Future<void> _sendWiFiConfig(String ssid, String passphrase) async {
     final scanCommand = MessengeHelper.prepareWiFiConfigMsg(ssid, passphrase);
 
-    Uint8List returnData;
+    Uint8List? returnData;
     try {
-      returnData = await _session.sendDataToDevice(
-          ESPConstants.HANDLER_PROV_CONFIG, scanCommand);
+      returnData = await _session!
+          .sendDataToDevice(ESPConstants.HANDLER_PROV_CONFIG, scanCommand);
     } catch (e) {
       //print(e);
       rethrow;
@@ -130,11 +130,11 @@ class EspDevice {
   Future<void> _initSession() async {
     _session = Session(SoftAPTransport(), Security0());
 
-    await _session.init(null);
+    await _session!.init(null);
   }
 
   Future<Uint8List> _sendData(String path, Uint8List data) async {
-    return await _session.sendDataToDevice(path, data);
+    return await _session!.sendDataToDevice(path, data);
   }
 
   Future<List<WiFiAccessPoint>> _processWifiStatusResponse(
@@ -186,10 +186,10 @@ class EspDevice {
 
     final data = MessengeHelper.prepareGetWiFiScanListMsg(start, count);
 
-    Uint8List returnData;
+    Uint8List? returnData;
     try {
-      returnData =
-          await _session.sendDataToDevice(ESPConstants.HANDLER_PROV_SCAN, data);
+      returnData = await _session!
+          .sendDataToDevice(ESPConstants.HANDLER_PROV_SCAN, data);
     } catch (e) {
       //print(e);
       rethrow;
@@ -222,10 +222,11 @@ class EspDevice {
         }
 
         if (!isAvailable) {
-          final wifiAp = WiFiAccessPoint()
-            ..wifiName = ssid
-            ..rssi = response.entries[i].rssi
-            ..security = response.entries[i].auth.value;
+          final wifiAp = WiFiAccessPoint(
+            wifiName: ssid,
+            rssi: response.entries[i].rssi,
+            security: response.entries[i].auth.value,
+          );
           _wifiApList.add(wifiAp);
         }
 
@@ -263,10 +264,10 @@ class EspDevice {
   Future<void> _applyWiFiConfig() async {
     final scanCommand = MessengeHelper.prepareApplyWiFiConfigMsg();
 
-    Uint8List returnData;
+    Uint8List? returnData;
     try {
-      returnData = await _session.sendDataToDevice(
-          ESPConstants.HANDLER_PROV_CONFIG, scanCommand);
+      returnData = await _session!
+          .sendDataToDevice(ESPConstants.HANDLER_PROV_CONFIG, scanCommand);
     } catch (e) {
       //print(e);
       rethrow;
@@ -285,10 +286,10 @@ class EspDevice {
   Future<void> _pollForWifiConnectionStatus() async {
     final message = MessengeHelper.prepareGetWiFiConfigStatusMsg();
 
-    Uint8List returnData;
+    Uint8List? returnData;
     try {
-      returnData = await _session.sendDataToDevice(
-          ESPConstants.HANDLER_PROV_CONFIG, message);
+      returnData = await _session!
+          .sendDataToDevice(ESPConstants.HANDLER_PROV_CONFIG, message);
     } catch (e) {
       //print(e);
       rethrow;
@@ -328,7 +329,7 @@ class EspDevice {
     }
   }
 
-  List<dynamic> _processProvisioningStatusResponse(Uint8List responseData) {
+  List<dynamic> _processProvisioningStatusResponse(Uint8List? responseData) {
     var wifiStationState = WifiStationState.Disconnected;
     var failedReason = WifiConnectFailedReason.NetworkNotFound;
 

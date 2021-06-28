@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: wifi_constants.proto
 //
-// @dart = 2.3
+// @dart = 2.12
 // ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME
@@ -40,7 +40,7 @@ class WifiStationState extends $pb.ProtobufEnum {
 
   static final $core.Map<$core.int, WifiStationState> _byValue =
       $pb.ProtobufEnum.initByValue(values);
-  static WifiStationState valueOf($core.int value) => _byValue[value];
+  static WifiStationState? valueOf($core.int value) => _byValue[value];
 
   const WifiStationState._($core.int v, $core.String n) : super(v, n);
 }
@@ -66,7 +66,7 @@ class WifiConnectFailedReason extends $pb.ProtobufEnum {
 
   static final $core.Map<$core.int, WifiConnectFailedReason> _byValue =
       $pb.ProtobufEnum.initByValue(values);
-  static WifiConnectFailedReason valueOf($core.int value) => _byValue[value];
+  static WifiConnectFailedReason? valueOf($core.int value) => _byValue[value];
 
   const WifiConnectFailedReason._($core.int v, $core.String n) : super(v, n);
 }
@@ -114,7 +114,7 @@ class WifiAuthMode extends $pb.ProtobufEnum {
 
   static final $core.Map<$core.int, WifiAuthMode> _byValue =
       $pb.ProtobufEnum.initByValue(values);
-  static WifiAuthMode valueOf($core.int value) => _byValue[value];
+  static WifiAuthMode? valueOf($core.int value) => _byValue[value];
 
   const WifiAuthMode._($core.int v, $core.String n) : super(v, n);
 }
