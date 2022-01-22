@@ -12,7 +12,6 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'wifi_constants.pb.dart' as $0;
 
 import 'constants.pbenum.dart' as $1;
-import 'wifi_constants.pbenum.dart' as $0;
 import 'wifi_config.pbenum.dart';
 
 export 'wifi_config.pbenum.dart';
