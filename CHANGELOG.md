@@ -1,3 +1,7 @@
+## 1.0.0
+
+- Migration to null safety.
+
 ## 0.0.2
 
 - Updated readme.

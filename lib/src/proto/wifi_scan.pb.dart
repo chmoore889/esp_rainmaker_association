@@ -42,7 +42,11 @@ class CmdScanStart extends $pb.GeneratedMessage {
             : 'groupChannels',
         $pb.PbFieldType.OU3)
     ..a<$core.int>(
-        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'periodMs', $pb.PbFieldType.OU3)
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'periodMs',
+        $pb.PbFieldType.OU3)
     ..hasRequiredFields = false;
 
   CmdScanStart._() : super();
@@ -429,9 +433,26 @@ class WiFiScanResult extends $pb.GeneratedMessage {
             : 'channel',
         $pb.PbFieldType.OU3)
     ..a<$core.int>(
-        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rssi', $pb.PbFieldType.O3)
-    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bssid', $pb.PbFieldType.OY)
-    ..e<$0.WifiAuthMode>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'auth', $pb.PbFieldType.OE, defaultOrMaker: $0.WifiAuthMode.Open, valueOf: $0.WifiAuthMode.valueOf, enumValues: $0.WifiAuthMode.values)
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'rssi',
+        $pb.PbFieldType.O3)
+    ..a<$core.List<$core.int>>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bssid',
+        $pb.PbFieldType.OY)
+    ..e<$0.WifiAuthMode>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'auth',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $0.WifiAuthMode.Open,
+        valueOf: $0.WifiAuthMode.valueOf,
+        enumValues: $0.WifiAuthMode.values)
     ..hasRequiredFields = false;
 
   WiFiScanResult._() : super();
@@ -629,7 +650,10 @@ class WiFiScanPayload extends $pb.GeneratedMessage {
     15: WiFiScanPayload_Payload.respScanResult,
     0: WiFiScanPayload_Payload.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WiFiScanPayload',
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'WiFiScanPayload',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
@@ -637,24 +661,59 @@ class WiFiScanPayload extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [10, 11, 12, 13, 14, 15])
     ..e<WiFiScanMsgType>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'msg', $pb.PbFieldType.OE,
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'msg',
+        $pb.PbFieldType.OE,
         defaultOrMaker: WiFiScanMsgType.TypeCmdScanStart,
         valueOf: WiFiScanMsgType.valueOf,
         enumValues: WiFiScanMsgType.values)
-    ..e<$1.Status>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE,
+    ..e<$1.Status>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'status',
+        $pb.PbFieldType.OE,
         defaultOrMaker: $1.Status.Success,
         valueOf: $1.Status.valueOf,
         enumValues: $1.Status.values)
     ..aOM<CmdScanStart>(
-        10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cmdScanStart',
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cmdScanStart',
         subBuilder: CmdScanStart.create)
     ..aOM<RespScanStart>(
-        11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'respScanStart',
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'respScanStart',
         subBuilder: RespScanStart.create)
-    ..aOM<CmdScanStatus>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cmdScanStatus', subBuilder: CmdScanStatus.create)
-    ..aOM<RespScanStatus>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'respScanStatus', subBuilder: RespScanStatus.create)
-    ..aOM<CmdScanResult>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cmdScanResult', subBuilder: CmdScanResult.create)
-    ..aOM<RespScanResult>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'respScanResult', subBuilder: RespScanResult.create)
+    ..aOM<CmdScanStatus>(
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cmdScanStatus',
+        subBuilder: CmdScanStatus.create)
+    ..aOM<RespScanStatus>(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'respScanStatus',
+        subBuilder: RespScanStatus.create)
+    ..aOM<CmdScanResult>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cmdScanResult',
+        subBuilder: CmdScanResult.create)
+    ..aOM<RespScanResult>(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'respScanResult',
+        subBuilder: RespScanResult.create)
     ..hasRequiredFields = false;
 
   WiFiScanPayload._() : super();

@@ -67,29 +67,48 @@ class RespGetStatus extends $pb.GeneratedMessage {
     11: RespGetStatus_State.connected,
     0: RespGetStatus_State.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'RespGetStatus',
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RespGetStatus',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
               : 'espressif'),
       createEmptyInstance: create)
     ..oo(0, [10, 11])
-    ..e<$1.Status>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE,
+    ..e<$1.Status>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'status',
+        $pb.PbFieldType.OE,
         defaultOrMaker: $1.Status.Success,
         valueOf: $1.Status.valueOf,
         enumValues: $1.Status.values)
     ..e<$0.WifiStationState>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staState', $pb.PbFieldType.OE,
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'staState',
+        $pb.PbFieldType.OE,
         defaultOrMaker: $0.WifiStationState.Connected,
         valueOf: $0.WifiStationState.valueOf,
         enumValues: $0.WifiStationState.values)
     ..e<$0.WifiConnectFailedReason>(
-        10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'failReason', $pb.PbFieldType.OE,
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'failReason',
+        $pb.PbFieldType.OE,
         defaultOrMaker: $0.WifiConnectFailedReason.AuthError,
         valueOf: $0.WifiConnectFailedReason.valueOf,
         enumValues: $0.WifiConnectFailedReason.values)
     ..aOM<$0.WifiConnectedState>(
-        11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'connected',
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'connected',
         subBuilder: $0.WifiConnectedState.create)
     ..hasRequiredFields = false;
 
@@ -220,8 +239,17 @@ class CmdSetConfig extends $pb.GeneratedMessage {
             : 'passphrase',
         $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(
-        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bssid', $pb.PbFieldType.OY)
-    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'channel', $pb.PbFieldType.O3)
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bssid',
+        $pb.PbFieldType.OY)
+    ..a<$core.int>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'channel',
+        $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   CmdSetConfig._() : super();
@@ -527,7 +555,10 @@ class WiFiConfigPayload extends $pb.GeneratedMessage {
     15: WiFiConfigPayload_Payload.respApplyConfig,
     0: WiFiConfigPayload_Payload.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'WiFiConfigPayload',
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'WiFiConfigPayload',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
@@ -535,21 +566,50 @@ class WiFiConfigPayload extends $pb.GeneratedMessage {
       createEmptyInstance: create)
     ..oo(0, [10, 11, 12, 13, 14, 15])
     ..e<WiFiConfigMsgType>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'msg', $pb.PbFieldType.OE,
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'msg',
+        $pb.PbFieldType.OE,
         defaultOrMaker: WiFiConfigMsgType.TypeCmdGetStatus,
         valueOf: WiFiConfigMsgType.valueOf,
         enumValues: WiFiConfigMsgType.values)
-    ..aOM<CmdGetStatus>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cmdGetStatus',
+    ..aOM<CmdGetStatus>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cmdGetStatus',
         subBuilder: CmdGetStatus.create)
     ..aOM<RespGetStatus>(
-        11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'respGetStatus',
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'respGetStatus',
         subBuilder: RespGetStatus.create)
     ..aOM<CmdSetConfig>(
-        12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cmdSetConfig',
+        12,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cmdSetConfig',
         subBuilder: CmdSetConfig.create)
-    ..aOM<RespSetConfig>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'respSetConfig', subBuilder: RespSetConfig.create)
-    ..aOM<CmdApplyConfig>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cmdApplyConfig', subBuilder: CmdApplyConfig.create)
-    ..aOM<RespApplyConfig>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'respApplyConfig', subBuilder: RespApplyConfig.create)
+    ..aOM<RespSetConfig>(
+        13,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'respSetConfig',
+        subBuilder: RespSetConfig.create)
+    ..aOM<CmdApplyConfig>(
+        14,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cmdApplyConfig',
+        subBuilder: CmdApplyConfig.create)
+    ..aOM<RespApplyConfig>(
+        15,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'respApplyConfig',
+        subBuilder: RespApplyConfig.create)
     ..hasRequiredFields = false;
 
   WiFiConfigPayload._() : super();

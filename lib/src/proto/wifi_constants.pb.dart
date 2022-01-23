@@ -29,16 +29,32 @@ class WifiConnectedState extends $pb.GeneratedMessage {
             ? ''
             : 'ip4Addr')
     ..e<WifiAuthMode>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'authMode', $pb.PbFieldType.OE,
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'authMode',
+        $pb.PbFieldType.OE,
         defaultOrMaker: WifiAuthMode.Open,
         valueOf: WifiAuthMode.valueOf,
         enumValues: WifiAuthMode.values)
     ..a<$core.List<$core.int>>(
         3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ssid',
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'ssid',
         $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bssid', $pb.PbFieldType.OY)
-    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'channel', $pb.PbFieldType.O3)
+    ..a<$core.List<$core.int>>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bssid',
+        $pb.PbFieldType.OY)
+    ..a<$core.int>(
+        5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'channel',
+        $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   WifiConnectedState._() : super();

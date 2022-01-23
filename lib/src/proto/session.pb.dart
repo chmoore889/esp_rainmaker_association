@@ -35,15 +35,26 @@ class SessionData extends $pb.GeneratedMessage {
               : 'espressif'),
       createEmptyInstance: create)
     ..oo(0, [10, 11])
-    ..e<SecSchemeVersion>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'secVer', $pb.PbFieldType.OE,
+    ..e<SecSchemeVersion>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'secVer',
+        $pb.PbFieldType.OE,
         defaultOrMaker: SecSchemeVersion.SecScheme0,
         valueOf: SecSchemeVersion.valueOf,
         enumValues: SecSchemeVersion.values)
     ..aOM<$0.Sec0Payload>(
-        10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sec0',
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sec0',
         subBuilder: $0.Sec0Payload.create)
     ..aOM<$1.Sec1Payload>(
-        11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sec1',
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sec1',
         subBuilder: $1.Sec1Payload.create)
     ..hasRequiredFields = false;
 

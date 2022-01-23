@@ -146,15 +146,26 @@ class Sec0Payload extends $pb.GeneratedMessage {
               : 'espressif'),
       createEmptyInstance: create)
     ..oo(0, [20, 21])
-    ..e<Sec0MsgType>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'msg', $pb.PbFieldType.OE,
+    ..e<Sec0MsgType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'msg',
+        $pb.PbFieldType.OE,
         defaultOrMaker: Sec0MsgType.S0_Session_Command,
         valueOf: Sec0MsgType.valueOf,
         enumValues: Sec0MsgType.values)
     ..aOM<S0SessionCmd>(
-        20, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sc',
+        20,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sc',
         subBuilder: S0SessionCmd.create)
     ..aOM<S0SessionResp>(
-        21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sr',
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sr',
         subBuilder: S0SessionResp.create)
     ..hasRequiredFields = false;
 

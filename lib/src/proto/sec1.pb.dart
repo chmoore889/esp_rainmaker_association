@@ -82,29 +82,31 @@ class SessionCmd1 extends $pb.GeneratedMessage {
 }
 
 class SessionResp1 extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SessionResp1',
-          package: const $pb.PackageName(
-              const $core.bool.fromEnvironment('protobuf.omit_message_names')
-                  ? ''
-                  : 'espressif'),
-          createEmptyInstance: create)
-        ..e<$0.Status>(
-            1,
-            const $core.bool.fromEnvironment('protobuf.omit_field_names')
-                ? ''
-                : 'status',
-            $pb.PbFieldType.OE,
-            defaultOrMaker: $0.Status.Success,
-            valueOf: $0.Status.valueOf,
-            enumValues: $0.Status.values)
-        ..a<$core.List<$core.int>>(
-            3,
-            const $core.bool.fromEnvironment('protobuf.omit_field_names')
-                ? ''
-                : 'deviceVerifyData',
-            $pb.PbFieldType.OY)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SessionResp1',
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'espressif'),
+      createEmptyInstance: create)
+    ..e<$0.Status>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'status',
+        $pb.PbFieldType.OE,
+        defaultOrMaker: $0.Status.Success,
+        valueOf: $0.Status.valueOf,
+        enumValues: $0.Status.values)
+    ..a<$core.List<$core.int>>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'deviceVerifyData',
+        $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
 
   SessionResp1._() : super();
   factory SessionResp1({
@@ -250,7 +252,11 @@ class SessionResp0 extends $pb.GeneratedMessage {
               : 'espressif'),
       createEmptyInstance: create)
     ..e<$0.Status>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE,
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'status',
+        $pb.PbFieldType.OE,
         defaultOrMaker: $0.Status.Success,
         valueOf: $0.Status.valueOf,
         enumValues: $0.Status.values)
@@ -260,7 +266,12 @@ class SessionResp0 extends $pb.GeneratedMessage {
             ? ''
             : 'devicePubkey',
         $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deviceRandom', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'deviceRandom',
+        $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   SessionResp0._() : super();
@@ -356,27 +367,49 @@ class Sec1Payload extends $pb.GeneratedMessage {
     23: Sec1Payload_Payload.sr1,
     0: Sec1Payload_Payload.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Sec1Payload',
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Sec1Payload',
       package: const $pb.PackageName(
           const $core.bool.fromEnvironment('protobuf.omit_message_names')
               ? ''
               : 'espressif'),
       createEmptyInstance: create)
     ..oo(0, [20, 21, 22, 23])
-    ..e<Sec1MsgType>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'msg', $pb.PbFieldType.OE,
+    ..e<Sec1MsgType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'msg',
+        $pb.PbFieldType.OE,
         defaultOrMaker: Sec1MsgType.Session_Command0,
         valueOf: Sec1MsgType.valueOf,
         enumValues: Sec1MsgType.values)
     ..aOM<SessionCmd0>(
-        20, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sc0',
+        20,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sc0',
         subBuilder: SessionCmd0.create)
     ..aOM<SessionResp0>(
-        21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sr0',
+        21,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sr0',
         subBuilder: SessionResp0.create)
     ..aOM<SessionCmd1>(
-        22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sc1',
+        22,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sc1',
         subBuilder: SessionCmd1.create)
-    ..aOM<SessionResp1>(23, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sr1', subBuilder: SessionResp1.create)
+    ..aOM<SessionResp1>(
+        23,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'sr1',
+        subBuilder: SessionResp1.create)
     ..hasRequiredFields = false;
 
   Sec1Payload._() : super();

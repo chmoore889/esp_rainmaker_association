@@ -23,8 +23,11 @@ class CmdSetUserMapping extends $pb.GeneratedMessage {
               ? ''
               : 'rainmaker'),
       createEmptyInstance: create)
-    ..aOS(1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'UserID',
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'UserID',
         protoName: 'UserID')
     ..aOS(
         2,
@@ -121,7 +124,10 @@ class RespSetUserMapping extends $pb.GeneratedMessage {
         valueOf: RMakerConfigStatus.valueOf,
         enumValues: RMakerConfigStatus.values)
     ..aOS(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'NodeId',
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'NodeId',
         protoName: 'NodeId')
     ..hasRequiredFields = false;
 
@@ -208,20 +214,32 @@ class RMakerConfigPayload extends $pb.GeneratedMessage {
       const $core.bool.fromEnvironment('protobuf.omit_message_names')
           ? ''
           : 'RMakerConfigPayload',
-      package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'rainmaker'),
+      package: const $pb.PackageName(
+          const $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'rainmaker'),
       createEmptyInstance: create)
     ..oo(0, [10, 11])
-    ..e<RMakerConfigMsgType>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'msg', $pb.PbFieldType.OE,
+    ..e<RMakerConfigMsgType>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'msg',
+        $pb.PbFieldType.OE,
         defaultOrMaker: RMakerConfigMsgType.TypeCmdSetUserMapping,
         valueOf: RMakerConfigMsgType.valueOf,
         enumValues: RMakerConfigMsgType.values)
     ..aOM<CmdSetUserMapping>(
-        10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cmdSetUserMapping',
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'cmdSetUserMapping',
         subBuilder: CmdSetUserMapping.create)
     ..aOM<RespSetUserMapping>(
-        11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'respSetUserMapping',
+        11,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'respSetUserMapping',
         subBuilder: RespSetUserMapping.create)
     ..hasRequiredFields = false;
 
