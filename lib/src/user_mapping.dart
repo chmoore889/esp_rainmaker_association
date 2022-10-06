@@ -40,6 +40,6 @@ class UserMapping {
 }
 
 class AppConstants {
-  static final String HANDLER_RM_USER_MAPPING = 'cloud_user_assoc';
+  static const String HANDLER_RM_USER_MAPPING = 'cloud_user_assoc';
   // static final String HANDLER_RM_CLAIM = 'rmaker_claim';
 }

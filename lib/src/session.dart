@@ -2,7 +2,7 @@ import 'dart:typed_data';
 
 import 'package:esp_rainmaker_association/src/constants.dart';
 import 'package:esp_rainmaker_association/src/security0.dart';
-import 'package:esp_rainmaker_association/src/softAPTransport.dart';
+import 'package:esp_rainmaker_association/src/soft_ap_transport.dart';
 
 class Session {
   final SoftAPTransport transport;

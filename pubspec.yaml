@@ -11,5 +11,6 @@ dependencies:
   protobuf: ^2.0.0
 
 dev_dependencies:
+  lints: ^2.0.0
   pedantic: ^1.11.1
   uuid: ^3.0.4
