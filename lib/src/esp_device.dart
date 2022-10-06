@@ -9,7 +9,7 @@ import 'package:esp_rainmaker_association/src/proto/wifi_scan.pb.dart';
 import 'package:esp_rainmaker_association/src/constants.dart';
 import 'package:esp_rainmaker_association/src/security0.dart';
 import 'package:esp_rainmaker_association/src/session.dart';
-import 'package:esp_rainmaker_association/src/softAPTransport.dart';
+import 'package:esp_rainmaker_association/src/soft_ap_transport.dart';
 import 'package:esp_rainmaker_association/src/wifi_access_point.dart';
 
 class EspDevice {
